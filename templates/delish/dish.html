@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title>delish : {{dish.name}}</title>
+	<link rel="stylesheet" href="media/style.css" type="text/css" />
+</head>
+<body>
+	<div class="container">
+		<div class="dish">
+			<div class="inner">
+				<h1>{{dish.name}}</h1>
+				<h2>{{dish.book.chef.name}}, {{dish.book.name}} (page {{dish.page}})</h2>
+				<ul>
+					{% for ingredient in dish.ingredients.all %}
+					<li>{{ingredient.name}}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

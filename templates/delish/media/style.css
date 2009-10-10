@@ -1,0 +1,92 @@
+body {
+	font-family: helvetica, arial, sans-serif;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #6F8ADE;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	list-style: circle;
+}
+
+h1 {
+	font-family: helvetica, arial, sans-serif;
+	color: #00900C;
+	letter-spacing: -2px;
+	font-size: 40px;
+}
+
+.container {
+	width: 1000px;
+	clear: both;
+	text-align: left;
+	margin: 50 auto;
+}
+
+.dish {
+	float: left;
+	width: 450px;
+	background-color: #BACBFF;
+	color: #BD1F00;
+	font-family: georgia, helvetica, arial, sans-serif;
+}
+
+.dish .inner {
+	padding: 5px 20px;
+}
+
+.tagCloud {
+	float: right;
+	width: 500px;
+	padding: 35px 0 0 0;
+	text-align: justify;
+}
+
+.ingredient {
+	background-color: #BACBFF;
+	color: #BD1F00;
+	font-family: georgia, helvetica, arial, sans-serif;
+	font-size: 18px;
+	width: 700px;
+	letter-spacing: -1px;
+}
+
+.ingredient .inner {
+	padding: 5px 20px;
+}
+
+.ingredient h1 {
+	margin-bottom: 10px;
+}
+
+.ingredient ul {
+	margin: 10px 0 20px 2px;
+	padding: 0;
+	list-style: none;
+}
+
+.ingredient a {
+	color: #BD1F00;
+}
+
+.bottom {
+	clear: left;
+	display: none;
+}
+
+.chefs {
+	float: left;
+	width: 500px;
+}
+
+.books {
+	float: left;
+	width: 500px;
+}

@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>delish</title>
+	<link rel="stylesheet" href="media/style.css" type="text/css" />
+</head>
+<body>
+	<div class="container">
+		<div class="dish">
+			<div class="inner">
+				{% if dish %}
+				<h1>{{dish.name}}</h1>
+				<h2>{{dish.book.chef.name}}, {{dish.book.name}} (page {{dish.page}})</h2>
+				<ul>
+					{% for ingredient in dish.ingredients.all %}
+					<li>{{ingredient.name}}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			</div>
+		</div>
+		<div class="tagCloud">
+			{% if ingredients %}
+			{% for ingredient in ingredients %}
+			<a href="ingredient/{{ingredient.id}}" style='font-size: {{ingredient.dish_count|add:"15"}}px'>{{ingredient.name}}</a>
+			{% endfor %}
+			{% else %}
+			<p>No ingredients are available.</p>
+			{% endif %}
+		</div>
+	</div>
+	<div class="bottom">
+		<div class="chefs">
+			<h1>Chefs</h1>
+			<ul>
+				{% for chef in chefs.all %}
+				<li>{{chef.name}}</li>
+				{% endfor %}
+			</ul>
+		<div class="books">
+			<h1>Books</h1>
+			<ul>
+				{% for book in books.all %}
+				<li>{{book.name}}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+			
